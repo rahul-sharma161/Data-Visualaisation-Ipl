@@ -1,0 +1,31 @@
+{
+  "name": "ipl_project",
+  "version": "1.0.0",
+  "description": "## Install",
+  "main": "index.js",
+  "scripts": {
+    "ipl": "node index.js",
+    "start": "http-server",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "http-server": "^0.12.1",
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahul1612954/ipl_visualisation-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahul1612954/ipl_visualisation-/issues"
+  },
+  "homepage": "https://github.com/rahul1612954/ipl_visualisation-#readme"
+}

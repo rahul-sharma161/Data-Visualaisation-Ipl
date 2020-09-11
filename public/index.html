@@ -1,0 +1,68 @@
+<!-- renders files on web using http-server -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="IPL visualization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>
+        IPL visualization
+    </title>
+</head>
+
+<body>
+    <h1>IPL Dataset visualization</h1>
+    <!-- container to visualize data -->
+    <div id="matches-played-per-year" style="min-width: 310px; height: 400px; margin: 0 auto; border-style: groove;">
+    </div><br>
+    <div id="matches-played-per-year2" style="min-width: 310px; height: 400px; margin: 0 auto; border-style: groove;">
+    </div><br>
+    <div id="extra-runs" style="min-width: 310px; height: 400px; margin: 0 auto; border-style: groove;"></div><br>
+    <div id="best-economies" style="min-width: 310px; height: 400px; margin: 0 auto; border-style: groove;"></div><br>
+    <div id="highest-scores" style="min-width: 310px; height: 400px; margin: 0 auto; border-style: groove;"></div>
+    <br>
+    <div id="part-2">
+        <h4>Select year</h4>
+        <form>
+            <select id="options">
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+            </select>
+            <button id="year" type="submit">Show Data</button>
+            <div id="part2"> </div>
+
+
+        </form>
+
+
+
+
+
+
+
+    </div>
+    <div id="part-2-econ" style="min-width: 310px; height: 400px; margin: 5px auto "></div><br>
+
+
+
+
+
+    </script>
+    <h1></h1>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- used from machine -->
+    <!-- renders visualization of data customised data -->
+    <script src="./app.js"></script>
+
+</body>
