@@ -241,10 +241,35 @@ document.querySelector("form").addEventListener("submit", function (e) {
   }
   e.preventDefault();
   fetch(`/economy?year=${year}`)
-    .then(console.log(year))
-    .then((data) => console.log(data))
-    .then(visualizeData4);
+    .then((data) => data.json())
+    .then(visualizeData4)
+    .catch((e) => console.log("err!", e));
 });
-function visualizeData4() {
-  console.log(data);
+function visualizeData4(data) {
+  visualizeEconomy(data, year);
+}
+function visualizeEconomy(data, year) {
+  Highcharts.chart("part-2-econ", {
+    chart: {
+      type: "column",
+    },
+    title: {
+      text: `Top 10 economical bowlers of ${year}`,
+    },
+    xAxis: {
+      type: "category",
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Economy",
+      },
+    },
+    series: [
+      {
+        name: "Economy",
+        data: data,
+      },
+    ],
+  });
 }

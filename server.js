@@ -1,18 +1,16 @@
 const express = require("express");
 const app = express();
 var cors = require("cors");
-const data = require("./public/data1.json");
+const data = require("./public/data.json");
 
-console.log(data);
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
   res.sendFile(index.js);
 });
 app.get("/economy", (req, res) => {
-  console.log("called");
   let year = Object.values(req.query);
-  res.json(data["economyBowlers"][year]);
+  res.json(data["part2_bestEcons"][year]);
 });
 
 app.use(

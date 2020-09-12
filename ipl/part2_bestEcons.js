@@ -22,7 +22,6 @@ function bestEconomies(deleveries, matches, year) {
 
   result = {};
   balls = {};
-  var count = 1;
   for (let item of deliveries2015) {
     result[item.bowler] =
       result[item.bowler] +
@@ -43,9 +42,9 @@ function bestEconomies(deleveries, matches, year) {
   //console.log(arr.sort());
   arr.sort((a, b) => a[1] - b[1]);
   var arr = arr.slice(0, 10);
-  var obj = Object.fromEntries(arr);
-  //   console.log(obj);
-  return obj;
+  // var obj = Object.fromEntries(arr);
+  // console.log(arr);
+  return arr;
 }
 
 module.exports = part2_bestEcons;
